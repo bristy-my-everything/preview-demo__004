@@ -1,0 +1,207 @@
+////////////////////////////////////////////////////
+// Grid sidebar left
+$box-color-1: #C69963;
+$box-color-2: #54483A;
+$box-color-3: #101D2C;
+$box-color-4: #AAAAAA;
+$box-color-5: #c875fa;
+$box-color-6: #56d681;
+$box-color-7: #e2a690;
+$box-color-8: #26a7a2;
+$box-color-9: #e58080;
+$box-color-ten: #8d6246;
+$box-color-eleven: #6fabf8;
+$box-color-twelve: #6e12fd;
+
+
+////////////////////////////////////////////////////
+// grid_body_2
+.grid_body_2 {
+  display: grid;
+  grid-template-rows: repeat(20, min-content); // 9 row
+
+  grid-template-columns: [sidebar_0] 8rem // 1st col
+                         [sidebar_1 full_0] minmax(6rem, 1fr) // 2nd col
+                         [center_0] repeat(12, [col_0] minmax(min-content, 10rem) [col_1] ) // 3rd, 4th, 5th, 6th, 7th and 8th col
+                         [center_1] minmax(6rem, 1fr) [full_1]; // 9th
+
+  @include desktop3 {
+    grid-template-columns: [sidebar_0] 8rem // 1st col
+    [sidebar_1 full_0] 1fr // 2nd col
+    [center_0] repeat(12, [col_0] minmax(min-content, 10rem) [col_1] ) // 3rd, 4th, 5th, 6th, 7th and 8th col
+    [center_1] 1fr [full_1]; // 9th
+  }
+}
+
+
+////////////////////////////////////////////////////
+// Importent grid classes
+.grid_container {
+  background-color: $box-color-6;
+  grid-column: center_0 / center_1;
+}
+
+.grid_container_fluid {
+  $box-color-eleven: #6fabf8;
+  grid-column: full_0 / full_1;
+}
+
+.grid_container_left {
+  background-color: $box-color-5;
+  grid-column: center_0 / col_1 6;
+}
+
+.grid_container_right {
+  background-color: $box-color-eleven;
+  grid-column: col_1 6 / center_1;
+}
+
+.grid_container_left_0 {
+  background-color: $box-color-2;
+  grid-column: full_0 / col_1 6;
+}
+
+.grid_container_right_1 {
+  background-color: $box-color-3;
+  grid-column: col_1 6 / full_1;
+}
+
+
+////////////////////////////////////////////////////
+// Just for testing
+.box_1 {
+  background-color: $box-color-1;
+  grid-column: sidebar_0 / sidebar_1;
+  grid-row: 1 / -1;
+}
+
+.box_2 {
+  background-color: $box-color-2;
+}
+
+.box_3 {
+  background-color: $box-color-3;
+}
+
+.box_4 {
+  background-color: $box-color-4;
+}
+
+.box_5 {
+  background-color: $box-color-5;
+}
+
+.box_6 {
+  background-color: $box-color-6;
+}
+
+.box_7 {
+  background-color: $box-color-7;
+}
+
+.box_8 {
+  background-color: $box-color-8;
+}
+
+.box_9 {
+  background-color: $box-color-9;
+}
+
+.box_10 {
+  background-color: $box-color-ten;
+}
+
+.box_11 {
+  background-color: $box-color-eleven;
+}
+
+.box_12 {
+  background-color: $box-color-twelve;
+}
+
+.box_13 {
+  background-color: $box-color-5;
+}
+
+.box_14 {
+  background-color: $box-color-6;
+}
+
+.box_15 {
+  background-color: $box-color-7;
+}
+
+.box_16 {
+  background-color: $box-color-8;
+}
+
+
+////////////////////////////////////////////////////
+// Damo HTML
+/*
+  <div class="grid_body_2">
+    <div class="box_1">
+      Box 1
+    </div>
+
+    <div class="box_2">
+      Box 2
+    </div>
+
+    <div class="box_3">
+      Box 3
+    </div>
+
+    <div class="box_4">
+      Box 4
+    </div>
+
+    <div class="box_5">
+      Box 5
+    </div>
+
+    <div class="box_6">
+      Box 6
+    </div>
+
+    <div class="box_7">
+      Box 7
+    </div>
+
+    <div class="box_8">
+      Box 8
+    </div>
+
+    <div class="box_9">
+      Box 9
+    </div>
+
+    <div class="box_10">
+      Box 10
+    </div>
+
+    <div class="box_11">
+      Box 11
+    </div>
+
+    <div class="box_12">
+      Box 12
+    </div>
+
+    <div class="box_13">
+      Box 13
+    </div>
+
+    <div class="box_14">
+      Box 14
+    </div>
+
+    <div class="box_15">
+      Box 15
+    </div>
+
+    <div class="box_16">
+      Box 16
+    </div>
+  </div>
+*/

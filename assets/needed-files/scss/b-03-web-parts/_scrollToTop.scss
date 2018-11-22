@@ -1,0 +1,39 @@
+////////////////////////////////////////////////////
+// scrollToTop
+.scrollToTop {
+  position: fixed;
+  display: none;
+  bottom: 1.5rem;
+  right: 2rem;
+  z-index: 100000;
+
+  color: #fff;
+  background-color: #000;
+  height: 4.5rem;
+  width: 4.5rem;
+  text-align: center;
+  line-height: 4.5rem;
+  transition: all .3s;
+
+  &:hover {
+    color: #fff;
+    background-color: #e49504;
+  }
+
+  @include tab1 {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  @include phone1 {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+  }
+
+  i::before {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,70 @@
+////////////////////////////////////////////////////
+// Abstracts
+
+@import "b-01-abstracts/functions";
+@import "b-01-abstracts/variables";
+@import "b-01-abstracts/mixins";
+
+////////////////////////////////////////////////////
+// Base
+
+@import "b-02-base/typography";
+@import "b-02-base/base";
+@import "b-02-base/animations";
+@import "b-02-base/utilities";
+
+////////////////////////////////////////////////////
+// Web-parts
+
+// @import "b-03-web-parts/preloader";
+@import "b-03-web-parts/scrollToTop";
+@import "b-03-web-parts/bootstrap";
+// @import "b-03-web-parts/scrollbar";
+// @import "b-03-web-parts/navbar";
+
+
+////////////////////////////////////////////////////
+// Plugins-css
+// @import "b-04-plugins-css/b001-animate";
+// @import "b-04-plugins-css/b002-owl-carousel";
+// @import "b-04-plugins-css/b003-magnific-popup";
+
+// @import "b-04-plugins-css/b004-modal-video";
+// @import "b-04-plugins-css/b005-nice-select";
+
+
+////////////////////////////////////////////////////
+// Components
+@import "b-05-components/button";
+@import "b-05-components/heading";
+// @import "b-05-components/bristy_i_love_you";
+
+
+////////////////////////////////////////////////////
+// Layout
+@import "b-06-layout/header";
+@import "b-06-layout/footer";
+// @import "b-06-layout/grid/grid-sidebar-left";
+// @import "b-06-layout/grid/grid-sidebar-top";
+
+
+////////////////////////////////////////////////////
+// Site Pages
+
+/* index.html */ 
+@import "o-01-all-scss/home";
+
+
+
+
+
+
+
+
+
+
+// d-table h-100(vh-100) w-100
+// d-table-cell align-middle text-center
+// d-flex align-items-center justify-content-center
+// sass --watch assets\scss\main.scss:assets\css\custom\main.css
+// sass --watch assets\scss\main.scss:assets\css\main.css

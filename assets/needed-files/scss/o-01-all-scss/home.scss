@@ -1,0 +1,639 @@
+////////////////////////////////////////////////////
+// Navbar 
+.navbar-01 {
+
+  &__wrapper {
+    padding: 0 8.5rem !important;
+    position: relative;
+
+    @include desktop3 {
+      padding: 0 2rem !important;
+    }
+
+    // if you need style navbar img 
+    a {
+
+      img {
+        position: absolute;
+        left: 5rem;
+        top: -1.4rem;
+        cursor: pointer;
+        z-index: 100;
+        width: 15rem;
+
+        @include laptop1 {
+          width: 10rem;
+          top: -.5rem;
+        }
+
+        @include tab1 {
+          left: 2.5rem;
+        }
+
+        @include phone2 {
+          left: 1.5rem;
+          width: 8rem;
+          top: 0rem;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    padding: 3.5rem 0rem 2rem 0rem;
+    transition: all .3s linear;
+
+    @include laptop1 {
+      padding: 2rem 0rem;
+    }
+  }
+
+  ul.navbar-nav>li>a {
+    font-family: $font-display;
+    color: #fff !important;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  ul.navbar-nav>li>a:hover,
+  ul.navbar-nav>li>a:focus {
+    background: none !important;
+    color: #f4c613 !important; // need customize
+  }
+
+  // need customize
+  ul.navbar-nav>li.nav-item a.active {
+    color: #f4c613 !important;
+  }
+
+  .navbar-brand {
+    padding: 1.3rem 1.5rem;
+  }
+
+  .sticky {
+    background: #1D1E26;
+    padding: 2rem 0;
+    box-shadow: 0 8px 6px -9px #555;
+    z-index: 100;
+
+    @include tab1 {
+      padding: 1.5rem 0 2rem 0;
+    }
+
+    ul.navbar-nav>li>a {
+      color: #fff !important; // need customize
+    }
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+// Mobile Menu
+.mobile {
+
+  &__open-btn {
+    font-size: 3rem;
+    color: #f4c613;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    right: 5rem;
+    top: -1rem;
+    display: none;
+
+    @include laptop1 {
+      top: 0rem;
+    }
+
+    @include tab1 {
+      right: 2.5rem;
+    }
+
+    @include phone2 {
+      right: 1.5rem;
+      top: .2rem;
+    }
+
+    @include laptop1 {
+      display: block !important;
+    }
+  }
+
+  &__close-btn {
+    font-size: 5rem;
+    color: #212226;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+    top: 2.2rem;
+    right: 5rem;
+    transition: all .3s;
+
+    @include tab1 {
+      right: 2.5rem;
+    }
+
+    @include phone2 {
+      right: 1.5rem;
+    }
+
+    &:hover,
+    &:focus {
+      color: #f4c613;
+    }
+  }
+
+  &__nav {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    z-index: 105;
+    background-color: rgba(255, 255, 255, .9);
+    transition: all .3s linear;
+    overflow-y: hidden;
+
+    ul.nav {
+      display: block;
+    }
+
+    ul.nav>li.nav-item a.active {
+      color: #f4c613 !important;
+    }
+  }
+
+  &__nav-content {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: 15%;
+
+    ul li {
+      margin-bottom: 2rem;
+
+      @include tab1 {
+        margin-bottom: 1.5rem;
+      }
+
+      @include tab2 {
+        margin-bottom: 1rem;
+      }
+
+      @include phone2 {
+        margin-bottom: .5rem;
+      }
+    }
+
+    ul li a {
+      font-family: $font-display;
+      font-size: 1.6rem;
+      color: #212226;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all .3s;
+      display: inline-block;
+
+      @include phone2 {
+        font-size: 1.6rem;
+      }
+
+      &:hover,
+      &:focus {
+        color: #f4c613;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////
+// Preview Page
+.preview-area {
+
+  &.preview-area-img {
+    background: url(../../img/hero/full-bg-01.jpg);
+    @include overlay_parent;
+    @include bg_fixed;
+
+    &::before {
+      @include overlay;
+      background: #000;
+      opacity: .6;
+    }
+  }
+
+  .preview-area-content {
+    height: 95vh;
+
+    @include desktop3 {
+      height: 100vh;
+    }
+  }
+
+  .preview-banner {
+
+    h1 {
+      color: #fff;
+      font-size: 5rem;
+      font-weight: bold;
+
+      span {
+        color: #fbb431;
+        text-transform: uppercase;
+      }
+
+      @include desktop3 {
+        font-size: 4rem;
+      }
+
+      @include laptop1 {
+        font-size: 3rem;
+      }
+
+      @include phone2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 3rem;
+      font-weight: bold;
+
+      span {
+        color: #fbb431;
+      }
+
+      @include desktop3 {
+        font-size: 2.5rem;
+      }
+
+      @include laptop1 {
+        font-size: 2rem;
+      }
+
+      @include phone2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      color: #fff;
+      font-size: 1.7rem;
+      opacity: .85;
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 3rem;
+
+      @include desktop3 {
+        font-size: 1.5rem;
+      }
+
+      @include laptop1 {
+        margin-top: 2rem;
+      }
+
+      @include phone2 {
+        width: 100%;
+        font-size: 1.4rem;
+      }
+    }
+
+    a {
+      color: #fbb431;
+      padding: 1.2rem 3rem;
+      border: 2px solid #fbb431;
+      background: inherit;
+      margin-top: 5rem;
+      display: inline-block;
+      transition: .3s linear;
+      margin-right: 1rem;
+      font-weight: bold;
+
+      @include desktop3 {
+        padding: 1rem 2.5rem;
+      }
+
+      @include laptop1 {
+        margin-top: 3rem;
+      }
+
+      @include phone2 {
+        width: 45%;
+        font-size: 1.4rem;
+        padding: 1rem;
+      }
+
+      &>i {
+        @include phone2 {
+          display: none;
+        }
+      }
+
+      &:hover {
+        background: #fbb431;
+        color: #fff;
+        border-color: #fbb431;
+      }
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////
+// Demo area
+.demo {
+
+  &__titles {
+    margin-bottom: 8rem;
+
+    @include laptop2 {
+      margin-bottom: 5rem;
+    }
+
+    li {
+      display: inline-block;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      background: #fff;
+      box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.25);
+      margin: 0 .5rem 3rem;
+      font-weight: bold;
+
+      @include laptop1 {
+        padding: .8rem 1.5rem;
+        font-size: 1.4rem;
+      }
+
+      @include laptop2 {
+        margin-bottom: 2rem;
+      }
+    }
+
+    li.active {
+      background: #fbb431;
+    }
+  }
+
+  &__list {
+    @include desktop1_4 {
+      padding-right: 4%;
+      padding-left: 4%;
+    }
+  }
+
+  &__item {
+    margin-bottom: 3rem;
+    border: 1px solid #dee2e6;
+  }
+
+  &__hover {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      transition: .5s;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #000;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: .4s;
+      z-index: 2;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    @include middle;
+    z-index: 5;
+
+    a {
+      color: #fff;
+      padding: 1rem 3rem;
+      border: 2px solid #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      opacity: 0;
+      visibility: hidden;
+      transition: .4s;
+
+      &:hover {
+        background: #fbb431;
+        border-color: #fbb431;
+      }
+    }
+  }
+
+  &__name {
+    background: #333543;
+    padding: 1rem;
+    transition: all .5s;
+
+    h3 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #fff;
+      transition: all .5s;
+    }
+  }
+}
+
+.demo__item:hover .demo__hover::before {
+  opacity: .5;
+  visibility: visible;
+}
+
+.demo__item:hover .demo__hover img {
+  transform: scale(1.05);
+}
+
+.demo__item:hover .demo__btn a {
+  opacity: 1;
+  visibility: visible;
+}
+
+.demo__item:hover .demo__name {
+  background: #1D1E26;
+  border-color: #1D1E26;
+}
+
+.demo__item:hover .demo__name h3 {
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////
+// Feature area
+.feature {
+  background: #f6f6f6;
+
+  &__heading {
+
+    h2 {
+      color: #222;
+      margin-bottom: 5rem;
+      font-size: 4rem;
+      font-weight: bold;
+
+      @include phone1 {
+        font-size: 3rem;
+      }
+
+      @include phone3 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__item {
+    height: 16rem;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    transition: .5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__item-box {
+
+    img {
+      width: 7rem;
+    }
+
+    h4 {
+      margin-top: 1rem;
+      color: #555;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////
+// Footer area
+.footer {
+  background: #1D1E26;
+
+  h2 {
+    font-size: 5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    font-weight: bold;
+
+    @include desktop3 {
+      font-size: 4rem;
+    }
+
+    @include laptop1 {
+      font-size: 3rem;
+    }
+
+    @include phone2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  h3 {
+    font-size: 3.5rem;
+    color: #fbb431;
+    margin-bottom: 2rem;
+    font-weight: bold;
+
+    @include desktop3 {
+      font-size: 2.5rem;
+    }
+
+    @include laptop1 {
+      font-size: 2rem;
+    }
+
+    @include phone2 {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__rate {
+
+    i {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+
+      @include laptop1 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  a {
+    color: #fbb431;
+    padding: 1.2rem 3rem;
+    border: 2px solid #fbb431;
+    background: inherit;
+    display: inline-block;
+    transition: .3s linear;
+    font-weight: bold;
+
+    @include desktop3 {
+      padding: 1rem 2.5rem;
+    }
+
+    &:hover {
+      background: #fbb431;
+      color: #fff;
+      border: 2px solid #fbb431;
+    }
+  }
+}

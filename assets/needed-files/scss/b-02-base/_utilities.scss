@@ -1,0 +1,62 @@
+////////////////////////////////////////////////////
+// Utilities
+.vh-100 {
+  height: 100vh;
+}
+
+.content__box {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+
+////////////////////////////////////////////////////
+// google-map-1
+// .google-map-1 {
+
+//   .mapouter {
+//     text-align: right;
+//     height: 500px;
+//     width: 100%;
+
+//     @include laptop1 {
+//       height: 400px;
+//     }
+
+//     @include phone1 {
+//       height: 350px;
+//     }
+
+//     @include phone2 {
+//       height: 300px;
+//     }
+//   }
+
+//   .gmap_canvas {
+//     overflow: hidden;
+//     background: none !important;
+//     height: 100%;
+//     width: 100%;
+
+//     iframe {
+//       height: 100%;
+//       width: 100%;
+//       border: none;
+//       overflow: hidden;
+//       margin: 0;
+//     }
+//   }
+// }
+
+
+/*
+<!-- |==========================================| -->
+<!-- |=====|| google-map-1 start ||===============| -->
+<section class="google-map-1">
+  <div class="mapouter">
+    <div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Oakland&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe><a href="https://www.pureblack.de">werbeagentur</a></div>
+  </div>
+</section>
+<!-- |=====|| google-map-1 end ||=================| -->
+<!-- |==========================================| -->
+*/ 

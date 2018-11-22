@@ -1,0 +1,92 @@
+////////////////////////////////////////////////////
+// Typography
+
+// Old Importent fonts ====================
+// @import url('https://fonts.googleapis.com/css?family=Lusitana:400,700');
+// font-family: 'Lusitana', serif;
+
+// @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+// font-family: 'Rajdhani', sans-serif;
+// Old Importent fonts ====================
+
+
+////////////////////////////////////////////////////
+// Font
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:100,200,300,400,500,600,700');
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+
+
+////////////////////////////////////////////////////
+// Font family
+$font-primary: 'Open Sans', sans-serif;
+$font-display: 'Raleway', sans-serif;
+
+/* 01. Reset CSS */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+////////////////////////////////////////////////////
+// Mind it, 16px is root font size. So 16px = 100%
+// (100% / 16)*10px=62.5%. Right now root font size is 10px
+// if you need 9px root font-size (100% / 16)*9px = 56.25%;
+////////////////////////////////////////////////////
+// 14px = 54.687%; || 15px = 58.593%; || 17px = 66.406%; || 18px = 70.312%;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+html,
+body {
+  min-height: 100%;
+  // user-select: none;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #404040
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+p {
+  font-family: $font-primary;
+  font-weight: 400;
+}
